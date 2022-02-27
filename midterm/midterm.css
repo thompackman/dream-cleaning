@@ -1,0 +1,96 @@
+html {
+  box-sizing: border-box;
+}
+
+
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  /* background color */
+  body {
+    background-color: rgb(142, 202, 202);
+    margin: 150PX;
+    border-color: #aad4cf;
+  }
+
+/* background border colour */
+  p {
+    font-size: 20px;
+    display: inline;
+  
+  }
+
+/* display */
+nav ul {
+  text-align: start;
+}
+
+
+
+nav li {
+  display: inline-block;
+}
+
+nav li:nth-child(2) {
+  border: black;
+  border-right-style: solid;
+  border-left-style: solid;
+
+}
+
+nav li a {
+  padding: 100px;
+  color: black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30px;
+}
+
+img.b {
+  width: 300px;
+  padding: 10px;
+  /* apply float */
+  float: left;
+}
+
+
+.wrapper {
+  background-color: rgb(188, 219, 219);
+  padding: 0.5%;
+  padding-bottom: 1%;
+}
+
+#fullname {
+  width: 95%;
+}
+
+#email {
+  width: 95%;
+}
+
+#message {
+  width: 95%;
+  block-size: 150px;
+}
+
+h1, h2 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+input.a {
+  padding: 10px;
+  background-color: rgb(188, 219, 219);
+  
+}
+
+div.a {
+  text-align: right;
+  padding: 30px;
+}
