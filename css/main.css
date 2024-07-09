@@ -1,72 +1,398 @@
-/* This is a comment */
-body{
-    background-color: black;
-    /* background-image: url("../images/download.jpg"); */
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    line-height: 1.5;
+@font-face {
+  font-family: 'cleaning';
+  src: url(fonts/Cleaning.otf);
+  font-style: normal;
+  font-weight: 100;
 }
 
-h1, h3 {
-    color: brown;
+@font-face {
+  font-family: 'springclean';
+  src: url(fonts/Spring\ Cleaning.ttf);
+  font-style: normal;
+  font-weight: 100;
 }
 
-form div {
-    margin-bottom: 20px;
+p {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
 }
 
-/* unvisited link */
-a:link {
-    color: red;
-  }
-  
-  /* visited link */
-  a:visited {
-    color: royalblue;
-  }
-  
-  /* mouse over link */
-  a:hover {
-    color: red;
-  }
-  
-  /* selected link */
-  a:active {
-    color: blue;
-  }
-
-div {
-    background-color: blanchedalmond;
+nav {
+  background-color: black;
+  flex-direction: column;
 }
 
-a:link {
-    text-decoration: none;
-  }
+body {
+  background-image: url(/images/floor-background.jpg);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding:4rem 0 0 0;
+  scroll-behavior: smooth; /* Add smooth scrolling behavior */
+}
+
+.sections {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  top: 0;
   
-  a:visited {
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  a:active {
-    text-decoration: underline;
+}
+
+.sections a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.sections a:hover {
+  background-color: rgb(13, 206, 200);
+  border-radius: 10px;
+  color: white;
+}
+
+/* --- SOCIAL MEDIA ICON LINKS SETTINGS ----- */
+
+#fb {
+  margin-left: 6rem;
+}
+
+
+/* #ig {
+  margin-right: 6rem;
+} */
+
+/* ----- WELCOME DIV CLASS SETTINGS ----- */
+
+.welcome {
+  background-color: rgba(34, 33, 33, 0.7); /* light grey semi-transparent background */
+  color: white;
+  padding: 25px;
+  margin: 30px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.intro {
+  background-color: rgb(13, 206, 200);
+  color: white;
+  padding: 25px;
+  margin: 30px;
+  font-size: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro img.circle-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.service-box {
+  flex: 1 1 calc(25% - 20px); /* 25% width minus gap */
+  max-width: calc(25% - 20px);
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+}
+
+.service-box img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.service-box h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.service-box p {
+  margin: 0;
+  font-size: 1em;
+}
+
+
+h1 {
+  font-family: 'cleaning';
+  font-size: 50px;
+}
+
+h2 {
+  background-color: rgba(34, 33, 33, 0.7); /* light grey semi-transparent background */
+  color: white;
+  padding: 25px;
+  font-size: 45px;
+  margin: 30px;
+  font-family: 'springclean';
+  text-align: center;
+  border-radius: 10px;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ----- OUR TEAM SETTINGS ----- */
+
+.grid-container {
+  display: grid;
+  padding: 0 6rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr); /* Increased rows for the additional items */
+
+}
+
+h3 {
+  font-size: 35px;
+}
+
+.grid-item img {
+  width: 100%; /* Adjust the width as needed */
+  height: 100%; /* Maintain aspect ratio */
+  padding: none;
+  max-width: 100%; /* Maximum width of the image */
+}
+
+
+.grid-item:nth-child(1) {
+  color: white;
+  padding: 1rem;
+  background-color: rgb(13, 206, 200);
+}
+
+.grid-item:nth-child(2) {
+  /* background: url("images/cass.jpg") no-repeat center top; */
+  /* background-size: cover; */
+}
+
+.grid-item:nth-child(3) {
+  /* background: url("images/tess.jpg") no-repeat center top;
+  background-size: cover; */
+}
+
+.grid-item:nth-child(4) {
+  color: white;
+  padding: 1rem;
+  background-color: rgb(13, 206, 200);
+}
+
+/* ----- HOURS OF OPERATION SETTINGS ------ */
+
+.operation {
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr); /* Increased rows for the additional items */
+}
+
+.op-item {
+  padding: 1rem;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  border: solid black ;
+}
+
+.op-item:nth-child(1) {
+  background-color: rgb(13, 206, 200);
+  color: white;
+}
+
+.op-item:nth-child(2) {
+  background-color: rgb(13, 206, 200);
+  color: white;
+}
+
+.op-item:nth-child(3) {
+  background-color: white;
+}
+
+.op-item:nth-child(4) {
+  background-color: white;
+}
+
+.op-item:nth-child(5) {
+  background-color: white;
+}
+
+.op-item:nth-child(6) {
+  background-color: white;
+}
+
+/* ----- CONTACT SETTINGS ----- */
+
+.contact {
+  text-align: center;
+  color: white;
+  font-size: 35px;
+}
+
+.profile {
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+}
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the entire circle */
+  display: block;
+  margin: 0 auto 10px auto; /* Centers the image horizontally */
+}
+.profile p {
+  margin: 5px 0;
+}
+
+/* ----- EMAIL FORM SETTINGS ----- */
+
+.emailform{
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 3px solid white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px white;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-group input, .form-group textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.form-group button {
+  background-color: rgb(13, 206, 200);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ----- FOOTER SETTINGS ----- */
+
+.foot-container {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+/* ----- PHONE SCREEN SETTINGS ----- */
+
+@media screen and (max-width: 750px) {
+  #fb {
+      margin-left: 0;
   }
 
-  a:link {
-    background-color: yellow;
+  #services {
+      width: 40%;
   }
-  
-  a:visited {
-    background-color: cyan;
+  .service-box {
+      flex: 1 1 calc(33.333% - 20px); /* 33.33% width minus gap */
+      max-width: calc(33.333% - 20px);
   }
-  
-  a:hover {
-    background-color: lightgreen;
+}
+
+
+
+@media screen and (max-width: 480px) {
+  .service-box {
+      flex: 1 1 100%; /* 100% width for small screens */
+      max-width: 100%;
   }
-  
-  a:active {
-    background-color: hotpink;
-  } 
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: 1fr; /* Single column layout */
+      grid-template-rows: repeat(4, 1fr); /* Four rows */
+      padding: 0 2rem; /* Adjust padding for smaller screens */
+  }
+
+  h3 {
+      font-size: 28px; /* Adjust font size for smaller screens */
+  }
+
+  .grid-item {
+      padding: 0; /* Adjust padding for smaller screens */
+  }
+
+
+  .contact {
+      padding: 1rem;
+  }
+
+  #hours {
+      width: 40%;
+  }
+
+  #contact {
+      width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grid-container {
+      padding: 0 1rem; /* Further adjust padding for very small screens */
+  }
+
+  h3 {
+      font-size: 24px; /* Further adjust font size for very small screens */
+  }
+
+  .grid-item {
+      padding: 0; /* Maintain padding for consistency */
+  }
+
+  .contact {
+      padding: 1rem;
+  }
+
+  #hours {
+      width: 50%;
+  }
+
+  #contact {
+      width: 40%;
+  }
+}
